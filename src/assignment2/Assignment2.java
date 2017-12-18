@@ -6,9 +6,7 @@
 package assignment2;
 
 import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Random;
+
 
 /**
  *
@@ -37,15 +35,11 @@ public class Assignment2 {
         grade[2][0]="Timothy LoPapa";  
         grade[3][0]="Hashim Razak";  
         grade[4][0]="Evan Vanderheide";  
-       
         //call methods 
         populateGradesArray();
       displayGrades();
       getAverage();
-  
-      
     }
-    
    //Method to populate grades in a array 
     public static void populateGradesArray(){   
         SecureRandom rng = new SecureRandom();
@@ -59,7 +53,6 @@ public class Assignment2 {
             }
         }
     }
-    
     //Method to display grades to console
     public static void displayGrades(){
        //print out grades to board
@@ -70,14 +63,11 @@ public class Assignment2 {
                if(col <1)
                System.out.printf("%-18s",grade[row][col]);// Have the first column have enoughspacing for large names 
                else
-                System.out.printf("%-10s",grade[row][col]);  //keep everything after first column from having to large of a spacing  
-               
+                System.out.printf("%-10s",grade[row][col]);  //keep everything after first column from having to large of a spacing    
             }
            
-            System.out.println(" ");
-            
+            System.out.println(" ");   
         }
-       
     }
     
   //get avrage grade 
@@ -130,9 +120,6 @@ public class Assignment2 {
               
               if(avg4 < 50)
                    System.out.printf("%n%s is struggling with an average of %.2f",grade[4][0], avg4);
-           
-             
-    
 
    //Display the highest average to the screen with student name           
    System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);   
