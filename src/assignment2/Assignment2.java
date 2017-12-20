@@ -78,7 +78,8 @@ public class Assignment2 {
         double sum2= 0;
         double sum3= 0;
         double sum4= 0; 
-       
+        double highestAve ;   
+        String studentName =  null; 
        
         for(int row=1; row<grade[col].length; row++){
              
@@ -89,31 +90,14 @@ public class Assignment2 {
             sum4+= Double.valueOf(grade[4][row]); 
                  
             }
-//divide the sum of each row by 5 
+        //divide the sum of each row by 5 
         double avg1 = sum/5;  
         double avg2 = sum2/5;  
         double avg3 = sum3/5;  
         double avg4 = sum4/5;  
-            
-        getHighestAve(avg1,avg2,avg3,avg4);//call the highest ave method 
-        getFailingAve(avg1,avg2,avg3,avg4);//call the failing method
-    }
-    
-    
-    
-    /**
-     * Get the averages and test to see who has the highest average then get the matching name for the row then display to the console 
-     * @param avg1
-     * @param avg2
-     * @param avg3
-     * @param avg4 
-     */
-    public static void getHighestAve(double avg1,double avg2,double avg3,double avg4){
-        double highestAve =0;   
-        String studentName =  null; 
-        //Sort out the highest value of each row 
+        //  find the highest average of all the averages         
         highestAve = Math.max( avg1, Math.max( avg2, Math.max( avg3, avg4 ) ) );
-        
+        //match the corrosponding average to name 
         if(highestAve == avg1)
             studentName = grade[1][0];    
         else if(highestAve == avg2)
@@ -124,7 +108,8 @@ public class Assignment2 {
             studentName = grade[4][0];       
 
         //Display the highest average to the screen with student name           
-        System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);   
+        System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);  
+        getFailingAve(avg1,avg2,avg3,avg4);//call the failing method
     }
     
     /**
