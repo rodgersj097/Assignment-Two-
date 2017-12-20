@@ -123,8 +123,8 @@ public class Assignment2 {
         else if(highestAve == avg4)
             studentName = grade[4][0];       
 
-//Display the highest average to the screen with student name           
-   System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);   
+        //Display the highest average to the screen with student name           
+        System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);   
     }
     
     /**
