@@ -65,7 +65,7 @@ public class Assignment2 {
                     System.out.printf("%-10s",grade[row][col]);  //keep everything after first column from having to large of a spacing    
             }
            
-          System.out.println(" ");   
+        System.out.println(" ");   
         }
     }
     
@@ -95,8 +95,8 @@ public class Assignment2 {
         double avg3 = sum3/5;  
         double avg4 = sum4/5;  
             
-  getHighestAve(avg1,avg2,avg3,avg4);//call the highest ave method 
-  getFailingAve(avg1,avg2,avg3,avg4);//call the failing method
+        getHighestAve(avg1,avg2,avg3,avg4);//call the highest ave method 
+        getFailingAve(avg1,avg2,avg3,avg4);//call the failing method
     }
     
     
@@ -114,14 +114,14 @@ public class Assignment2 {
         //Sort out the highest value of each row 
         highestAve = Math.max( avg1, Math.max( avg2, Math.max( avg3, avg4 ) ) );
         
-          if(highestAve == avg1)
-                     studentName = grade[1][0];    
-                else if(highestAve == avg2)
-                     studentName = grade[2][0]; 
-                else if(highestAve == avg3)
-                     studentName = grade[3][0]; 
-                else if(highestAve == avg4)
-                     studentName = grade[4][0];       
+        if(highestAve == avg1)
+            studentName = grade[1][0];    
+        else if(highestAve == avg2)
+            studentName = grade[2][0]; 
+        else if(highestAve == avg3)
+            studentName = grade[3][0]; 
+        else if(highestAve == avg4)
+            studentName = grade[4][0];       
 
 //Display the highest average to the screen with student name           
    System.out.printf("%nThe student with the highest Average of %.2f is %s", highestAve, studentName);   
